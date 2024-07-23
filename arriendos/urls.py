@@ -11,5 +11,6 @@ urlpatterns = [
     path('solicitud/exito', views.exito , name='exito_solicitud'),
     path('usuario/update/', views.userUpdate , name='update_usuario'),
     path('arrendador/', views.arrendador , name='arrendador'),
+    path('arrendatario/', views.arrendatario , name='arrendatario'),
 
 ]

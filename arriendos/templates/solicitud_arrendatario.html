@@ -6,8 +6,9 @@
     <div class="success text-center mx-auto">
         <div>
             <img src="{{inmueble.image_url}}" alt="">
+            <h4 style="margin-top: 30px;">Solicitante: {{user.first_name}} {{user.last_name}}</h4>
             <h5>Arriendo: $ {{inmueble.arriendo_mensual}}</h5>
-            <form id="formulario" method="POST">
+            <form id="formulario" method="POST" action="exito">
                 {% csrf_token %}
 
                 {{ form.as_p }}

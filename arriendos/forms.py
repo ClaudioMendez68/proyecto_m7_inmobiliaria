@@ -6,8 +6,25 @@ class SolicitudArriendoForm(forms.ModelForm):
     
     class Meta:
         model = SolicitudArriendo
-        exclude = ['inmueble']
-
+        fields = ["estado", "usuario", "inmueble"]
+        
+        widgets = {
+            "estado": forms.HiddenInput(),
+            "usuario": forms.HiddenInput(),
+            "inmueble": forms.HiddenInput()
+        }
+        
+class SolicitudArrendadorForm(forms.ModelForm):
+    
+    class Meta:
+        model = SolicitudArriendo
+        fields = ["estado", "usuario", "inmueble"]
+        
+        widgets = {
+            "estado" : forms.ChoiceField(choices=[(1, 'Aceptada'), (2, 'Rechazada'), (3, 'Pendiente')]),
+            "usuario": forms.CharField(),
+            "inmueble": forms.CharField()
+        }
 class RegistrationForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     # password_confirm = forms.CharField(widget=forms.PasswordInput, label="Repita su password")

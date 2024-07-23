@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import SolicitudArriendoForm, UserUpdateForm, RegistrationForm
-from .models import Usuario, TipoUsuario, Inmueble
+from .forms import SolicitudArriendoForm, UserUpdateForm, RegistrationForm, SolicitudArrendadorForm
+from .models import Usuario, TipoUsuario, Inmueble, SolicitudArriendo
 from .services import obtener_inmueble
 
 
@@ -19,23 +19,31 @@ def indexView(request):
     return render(request, 'index.html', context)
 
 @login_required
+def arrendatario(request):
+    inmuebles = Inmueble.objects.filter(arrendado = False)
+    return render(request, 'arrendatario.html', {'inmuebles' : inmuebles})
+
+
+@login_required
 def arrendador(request):
     inmuebles = Inmueble.objects.all()
     return render(request, 'arrendador.html', {'inmuebles' : inmuebles})
 
 def nuevaSolicitud(request, inmueble_id):
     inmueble = get_object_or_404(Inmueble, id= inmueble_id)
-    
+    solicitud = SolicitudArriendo(inmueble = inmueble, usuario = request.user.usuario)
     if request.method == 'POST':
-        form = SolicitudArriendoForm(request.POST)
+        form = SolicitudArriendoForm(request.POST, instance=solicitud)
         if form.is_valid():
-            solicitud = form.save(commit=False)
-            solicitud.inmueble = inmueble
-            solicitud.save()
-            
-            return redirect('exito')
+            solicitud.save()            
+            return redirect('exito_solicitud')
     else:
-        form = SolicitudArriendoForm()
+        print(inmueble)
+        # Si no tuviera un default, debo agregar estado='pendiente' a continuación del usuario
+        if request.user.usuario.tipo_usuario == 2:
+            form = SolicitudArriendoForm(instance= solicitud)
+        else:
+            form = SolicitudArrendadorForm(instance= solicitud)
         
     context = {
         'form': form,
