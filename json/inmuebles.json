@@ -1,0 +1,116 @@
+[
+    {
+    "model": "arriendos.inmueble",
+    "pk": 1,
+    "fields": {
+        "nombre": "Amplia Casa 2 pisos",
+        "descripcion": "Cuenta con 4 habitaciones amplias y 3 baños completos, ideal para una familia en crecimiento.",
+        "m2_construidos": 144.00,
+        "m2_totales": 240.00,
+        "estacionamientos": 2,
+        "habitaciones": 4,
+        "banios": 3,
+        "direccion": "Los Copihues 1435",
+        "arriendo_mensual": 900000,
+        "image_url": "http://127.0.0.1:8000/static/img/casa_1.jpg",
+        "arrendado": false,
+        "comuna": 64,
+        "tipo_inmueble": 1
+        }
+    },
+    {
+    "model": "arriendos.inmueble",
+    "pk": 2,
+    "fields": {
+        "nombre": "Casa Unifamiliar 1 piso",
+        "descripcion": "Cuenta con 2 habitaciones amplias y 2 baños.",
+        "m2_construidos": 67.00,
+        "m2_totales": 110.00,
+        "estacionamientos": 1,
+        "habitaciones": 2,
+        "banios": 2,
+        "direccion": "Antonio Varas 1245",
+        "arriendo_mensual": 400000,
+        "image_url": "http://127.0.0.1:8000/static/img/casa_2.jpg",
+        "arrendado": false,
+        "comuna": 64,
+        "tipo_inmueble": 1
+        }
+    },
+    {
+    "model": "arriendos.inmueble",
+    "pk": 3,
+    "fields": {
+        "nombre": "Amplio Departamento",
+        "descripcion": "Cuenta con 3 habitaciones y 2 baños.",
+        "m2_construidos": 67.00,
+        "m2_totales": 70.00,
+        "estacionamientos": 1,
+        "habitaciones": 3,
+        "banios": 1,
+        "direccion": "Los Troncos 784 dpto 21",
+        "arriendo_mensual": 550000,
+        "image_url": "http://127.0.0.1:8000/static/img/departamento_1.jpg",
+        "arrendado": false,
+        "comuna": 64,
+        "tipo_inmueble": 2
+        }
+    },
+    {
+    "model": "arriendos.inmueble",
+    "pk": 4,
+    "fields": {
+        "nombre": "Casa Inteligente 1 piso",
+        "descripcion": "Cuenta con 3 habitaciones y 2 baños, cercano a escuela y supermercado.",
+        "m2_construidos": 78.00,
+        "m2_totales": 102.00,
+        "estacionamientos": 1,
+        "habitaciones": 3,
+        "banios": 2,
+        "direccion": "Teniente Bello 354",
+        "arriendo_mensual": 650000,
+        "image_url": "http://127.0.0.1:8000/static/img/casa_3.jpg",
+        "arrendado": false,
+        "comuna": 83,
+        "tipo_inmueble": 1
+        }
+    },
+    {
+    "model": "arriendos.inmueble",
+    "pk": 5,
+    "fields": {
+        "nombre": "Parcela para Camping",
+        "descripcion": "Cuenta con 1 baño. Acceso a carretera principal y estero.",
+        "m2_construidos": 0,
+        "m2_totales": 5000.00,
+        "estacionamientos": 1,
+        "habitaciones": 0,
+        "banios": 1,
+        "direccion": "Camino Pucón-Caburga Km 12",
+        "arriendo_mensual": 300000,
+        "image_url": "http://127.0.0.1:8000/static/img/parcela_1.png",
+        "arrendado": false,
+        "comuna": 78,
+        "tipo_inmueble": 3
+        }
+    },
+    {
+    "model": "arriendos.inmueble",
+    "pk": 6,
+    "fields": {
+        "nombre": "Amplio Departamento Central",
+        "descripcion": "Cuenta con 3 habitaciones y 2 baños.",
+        "m2_construidos": 74.00,
+        "m2_totales": 78.00,
+        "estacionamientos": 1,
+        "habitaciones": 3,
+        "banios": 2,
+        "direccion": "Las Nalkas 452 dpto 32",
+        "arriendo_mensual": 600000,
+        "image_url": "http://127.0.0.1:8000/static/img/departamento_2.jpg",
+        "arrendado": false,
+        "comuna": 75,
+        "tipo_inmueble": 1
+        }
+    }
+]

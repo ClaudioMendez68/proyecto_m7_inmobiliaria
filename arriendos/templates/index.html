@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'content' %}
+<section>
+    <div class="container py-3 px-3">
+        <h2 class="text-center mb-3">Inmuebles</h2>
+        <div class="row gx-3 gy-3">
+            {%for inmueble in inmuebles_disponibles%}
+            <div class="col-12 col-md-6 col-lg-4">                
+                <div class="card mx-auto">
+                    <img src="{{inmueble.image_url}}" class="card-img-top" alt="Casa ">
+                    <div class="card-body">
+                        <h5 class="card-title">{{inmueble.nombre}}</h5>
+                        <hr>
+                        <p class="card-text">{{inmueble.descripcion}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item fs-3">$ {{inmueble.arriendo_mensual}}.-</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="{% url 'solicitud' inmueble.id %}" class="card-link btn btn-primary">Arrendar</a>
+                    </div>
+                </div>            
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock  %}

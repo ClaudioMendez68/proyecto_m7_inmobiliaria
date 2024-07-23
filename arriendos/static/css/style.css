@@ -1,0 +1,90 @@
+body {
+    background-color: azure;
+}
+
+#header img{
+    width: 23em;
+}
+
+.navbar {
+    background: #ace2e1;
+    border-radius: 5px;
+}
+
+#formulario {
+    width: 20em;
+    padding: 0em 1em;
+}
+
+.card {
+    width: 21em;
+    box-shadow:0px 0px 3px 0px #7ac4c3;
+}
+
+.card img {
+    height: 18em;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-body {
+    background-color: #fff6d5;
+}
+
+.card-text {
+    height: 12em;
+    text-align: justify;
+}
+
+.list-group-item {
+    background-color: #fff6d5; 
+}
+
+#foto-familiar {
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.texto {
+    background-color: #fff6d5;
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+    text-align: justify;
+}
+
+.success {
+    margin-top: 4em;
+    padding: 3em 0em;
+    background-color: #fff6d5;
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.contact {
+    width: 21em;
+    margin: 1.5em auto;
+    padding: 1em 0em;
+    background-color: #fff6d5;
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.register {
+    margin: 1.5em auto;
+    background-color: #fff6d5;
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.welcome {
+    background-color: #fff6d5;
+    box-shadow:0px 0px 3px 0px #7ac4c3;
+}
+
+#footer {
+    background: #7ac4c3; 
+    color: white; 
+    text-align: center;
+}

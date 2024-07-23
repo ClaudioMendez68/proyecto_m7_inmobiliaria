@@ -1,0 +1,41 @@
+[
+    {
+    "model": "arriendos.usuario",
+    "pk": 1,
+    "fields": {
+        "rut": "10366997",
+        "nombres": "Carlos Armando",
+        "apellidos": "Fonseca Quezada",
+        "direccion": "Los Lirios 1432",
+        "telefono": "954782541",
+        "email": "carlos.fonseca@correo.com",
+        "tipo_usuario": 1
+        }
+    },
+    {
+    "model": "arriendos.usuario",
+    "pk": 2,
+    "fields": {
+        "rut": "13317066",
+        "nombres": "Marcelo Alejandro",
+        "apellidos": "Martínez Oñate",
+        "direccion": "Antonio Varas 234",
+        "telefono": "936521254",
+        "email": "mmaartinez@gmail.com",
+        "tipo_usuario": 1
+        }
+    },
+    {
+    "model": "arriendos.usuario",
+    "pk": 3,
+    "fields": {
+        "rut": "11354497",
+        "nombres": "Oscar Marambio",
+        "apellidos": "Tombolini López",
+        "direccion": "Olimpia 9878",
+        "telefono": "921459658",
+        "email": "tombolini1998@yahoo.es",
+        "tipo_usuario": 1
+        }
+    }
+]

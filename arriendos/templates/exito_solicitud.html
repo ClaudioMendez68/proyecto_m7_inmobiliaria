@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block 'content' %}
+<div class="container">
+    <div class="success text-center mx-auto">
+        <div>
+            <h3>Hemos recibido su solicitud de arriendo.</h3>
+            <h3 class="mb-5">Le responderemos en breve.</h3>
+            <a href="{% url 'index' %}" class="btn btn-primary">Volver al Inicio</a>
+        </div>
+    </div>
+</div>
+{% endblock  %}
+
+{% block 'footer' %}
+<div class = "container fixed-bottom" id="footer">
+    <p>Desarrollado por Claudio Méndez &nbsp &nbsp &copy 2024</p>
+</div>
+{% endblock  %}

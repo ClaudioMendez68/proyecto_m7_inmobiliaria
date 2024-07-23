@@ -1,0 +1,42 @@
+[
+{
+    "model": "arriendos.tipousuario",
+    "pk": 1,
+    "fields": {
+        "tipo": "arrendador"
+    }
+},
+{
+    "model": "arriendos.tipousuario",
+    "pk": 2,
+    "fields": {
+        "tipo": "arrendatario"
+    }
+},
+{
+    "model": "arriendos.usuario",
+    "pk": 1,
+    "fields": {
+        "rut": "10366997",
+        "nombres": "Carlos Armando",
+        "apellidos": "Fonseca Quezada",
+        "direccion": "Los Lirios 1432",
+        "telefono": "954782541",
+        "email": "carlos.fonseca@correo.com",
+        "tipo_usuario": 1
+    }
+},
+{
+    "model": "arriendos.usuario",
+    "pk": 2,
+    "fields": {
+        "rut": "13317066",
+        "nombres": "Fernando Alexander",
+        "apellidos": "Martínez Ojeda",
+        "direccion": "San Martín 123",
+        "telefono": "974583652",
+        "email": "fdomartinez@gmail.com",
+        "tipo_usuario": 2
+    }
+}
+]

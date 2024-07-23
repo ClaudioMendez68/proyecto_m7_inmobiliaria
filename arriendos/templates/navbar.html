@@ -1,0 +1,53 @@
+{% load static %}
+
+<div class="container" id="navigation">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="{% url 'update_usuario' %}">Actualizar Datos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="">Estado de Solicitud</a>
+                    </li>
+                    {% endif %}
+                    {% if user.usuario.tipo_usuario.id == "1" %}
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="{% url 'update_usuario' %}">Ver Inmuebles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="">Ver Solicitudes</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                
+                <ul class="navbar-nav ms-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <form action="{% url 'logout' %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary">Cerrar Sesión</button>
+                        </form>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a type="button" class="nav-link btn btn-primary" href="{% url 'registro_usuario' %}">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="{% url 'login' %}">Iniciar Sesión</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+</div>
